@@ -1,0 +1,4 @@
+# Parts
+PART I - DECLARATION OF RIGHTS [before 1]
+PART II - FORM OF GOVERNMENT [before 30]
+PART III - THE LAND [before 104]
