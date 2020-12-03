@@ -1,6 +1,6 @@
 # Schedule
-Procedure for Appointing a Prime Minister
-(clause 50A)
+(Clause 50A)
+PROCEDURE FOR APPOINTING A PRIME MINISTER
 (1) The Legislative Assembly shall recommend the appointment of a Prime Minister as follows -
 (a) within 10 days from the return of the writs of election after a general election has taken place, the Interim Speaker appointed under subsection (8) of this Schedule shall invite all elected representatives to submit to him their nominations for Prime Minister Designate, to be duly seconded by 2 other elected representatives and to be received by the Interim Speaker within 14 days from the return of the writs of election; and no representative who has proposed or seconded a candidate may propose or second any other;
 (b) within 3 days after the last date for receipt of nominations for Prime Minister Designate, the Interim Speaker shall convene a meeting of all the elected representatives of the people and of the nobles for the purpose of deciding who they shall recommend for appointment as Prime Minister Designate:
