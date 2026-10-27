@@ -1,0 +1,231 @@
+{
+ "country": "TO",
+ "acts": [
+  {
+   "slug": "constitution",
+   "short": "Constitution",
+   "title": "Constitution of Tonga",
+   "url": "https://www.ago.gov.to/cms/legislation/current-revised-edition/by-title.html",
+   "versions": [
+    {
+     "from": "1988-12-31",
+     "units": 112,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ActofConstitutionofTonga_1.pdf",
+     "sha256": "a07b3daff533502fa4943ff6e64ab87f1bf75a223c5aefa6c5c2868ced4cd21f"
+    },
+    {
+     "from": "1990-07-01",
+     "units": 116,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ActofConstitutionofTonga_1.pdf",
+     "sha256": "a07b3daff533502fa4943ff6e64ab87f1bf75a223c5aefa6c5c2868ced4cd21f"
+    },
+    {
+     "from": "1990-07-18",
+     "units": 116,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "1990-08-08",
+     "units": 116,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ActofConstitutionofTonga_1.pdf",
+     "sha256": "a07b3daff533502fa4943ff6e64ab87f1bf75a223c5aefa6c5c2868ced4cd21f"
+    },
+    {
+     "from": "1991-02-22",
+     "units": 117,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "1997-10-29",
+     "units": 117,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "1999-08-11",
+     "units": 117,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "1999-11-03",
+     "units": 117,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "2003-11-21",
+     "units": 118,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "2007-01-03",
+     "units": 118,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "2010-05-06",
+     "units": 118,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "2010-09-24",
+     "units": 123,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "2010-11-24",
+     "units": 126,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "2011-03-16",
+     "units": 126,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "2013-05-03",
+     "units": 126,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "2016-12-31",
+     "units": 126,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_2.pdf",
+     "sha256": "262aa5c358163515ef6889e37a1bbbdce34cc08d801aa041fbfaaa2f7befb24b"
+    },
+    {
+     "from": "2020-12-04",
+     "units": 126,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_3.pdf",
+     "sha256": "197f1dcaf64c3267e589354aafdc2783dae7fac9f4d3b296808d21d45f7004de"
+    }
+   ]
+  },
+  {
+   "slug": "criminal-offences",
+   "short": "Criminal Offences Act",
+   "title": "Criminal Offences Act",
+   "url": "https://www.ago.gov.to/cms/legislation/current-revised-edition/by-title.html",
+   "versions": [
+    {
+     "from": "1988-12-31",
+     "units": 201,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_1.pdf",
+     "sha256": "faaf06da865aac845c34cb61c20e5eedb20cfaadf7e2a4c98b5879b1bf6241e6"
+    },
+    {
+     "from": "1990-12-19",
+     "units": 202,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "1991-08-15",
+     "units": 202,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "1992-02-04",
+     "units": 204,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "1995-10-10",
+     "units": 204,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "1997-09-22",
+     "units": 204,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "1999-11-03",
+     "units": 204,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "1999-11-17",
+     "units": 205,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "2000-08-04",
+     "units": 205,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "2001-09-13",
+     "units": 205,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "2003-08-21",
+     "units": 206,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "2006-01-10",
+     "units": 206,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "2007-01-03",
+     "units": 206,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "2012-12-27",
+     "units": 210,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "2013-11-11",
+     "units": 213,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "2015-12-04",
+     "units": 213,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "2016-12-31",
+     "units": 214,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_2.pdf",
+     "sha256": "a023bb4753cf20dbadaa1329de7e2189b61dde76c50b11a17159a84ee4e0390a"
+    },
+    {
+     "from": "2020-12-04",
+     "units": 214,
+     "source_url": "https://www.ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1924/1924-0010/CriminalOffencesAct_3.pdf",
+     "sha256": "8e4a8d313dc53c595b1cf20741f147cce5a5487282317647c9be7dd81ba13bba"
+    }
+   ]
+  }
+ ]
+}
