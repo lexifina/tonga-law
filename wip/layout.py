@@ -26,7 +26,7 @@ def norm(s):
         s = s.replace(a, '"')
     for a in '–—‑−‐':
         s = s.replace(a, '-')
-    s = s.replace('', '').replace('­', '')
+    s = s.replace('', '').replace('­', '').replace('‎', '').replace('‏', '')
     s = re.sub(r'\.{4,}', '...', s)
     s = re.sub(r'[ ]{2,}', ' ', s)
     return s
@@ -96,13 +96,13 @@ LABEL = re.compile(r'^\((?:[0-9]{1,3}[A-Za-z]{0,2}|[a-z]{1,2}|[ivxl]{1,5}|[A-Z]{
 
 
 def _is_heading(row):
-    sp = row['spans']
-    if not sp[0]['bold']:
+    sp = [s for s in row['spans'] if norm(s['t']).replace('‎', '').strip()]
+    if not sp or not sp[0]['bold']:
         return None
-    first = sp[0]['t'].strip()
+    first = norm(sp[0]['t']).replace('‎', '').strip()
     m = NUM.match(first)
-    rest = ''.join(s['t'] for s in sp[1:]).strip()
-    if m and rest and all(s['bold'] for s in sp[1:]):
+    rest = norm(''.join(s['t'] for s in sp[1:])).replace('‎', '').strip()
+    if m and rest and (all(s['bold'] for s in sp[1:]) or re.match(r'^\(?\s*Repealed', rest)):
         return m.group(1), rest
     m2 = re.match(r'^(\d{1,3}[A-Z]{0,2})\s+(\S.*)$', first)
     if m2 and all(s['bold'] for s in sp) and not first.isupper():
@@ -121,18 +121,19 @@ def _is_structure(row):
     return (sp[0]['size'] >= 12 and not sp[0]['italic']) or (letters.isupper() and len(letters) > 3)
 
 
-def read(pdf):
+def read(pdf, inline_notes=False):
     doc = fitz.open(stream=pdf, filetype='pdf')
     units, outline, endnote_rows = [], [], []
     front = []  # lines before the first provision (title, long title, preamble)
     cur = None
     started_body = False
+    in_endnotes = False
     for pno, page in enumerate(doc):
         hdr = _header(page)
         if 'Arrangement of' in hdr or pno == 0 and 'Revised Edition' in page.get_text() and not re.search(r'(Clause|Section|Regulation|Rule)\s*\d', hdr):
             continue
         rows = _lines(page)
-        if 'Endnotes' in hdr or 'ENDNOTES' in hdr:
+        if 'Endnotes' in hdr or 'ENDNOTES' in hdr or in_endnotes:
             endnote_rows.append(rows)
             continue
         page_first = True
@@ -140,7 +141,9 @@ def read(pdf):
             t = _text(r)
             plain = norm(t.replace('\x01', '').replace('\x02', '')).strip()
             if plain == 'ENDNOTES':
-                continue
+                in_endnotes = True
+                endnote_rows.append([x for x in rows if x['y1'] > r['y1']])
+                break
             hd = _is_heading(r)
             if hd:
                 started_body = True
@@ -168,6 +171,9 @@ def read(pdf):
                     else:
                         outline.append({'text': plain, 'before': None, 'y': r['y1'], 'page': pno})
                     continue
+            if cur is None and re.match(r'^PART [IVXL0-9]+', plain) and all(x['bold'] for x in r['spans']):
+                outline.append({'text': plain, 'before': None, 'y': r['y1'], 'page': pno})
+                continue
             if cur is None:
                 front.append((r, t, pno))
                 continue
@@ -183,7 +189,7 @@ def read(pdf):
                 o['before'] = u['num']
                 break
     for u in units:
-        u['paras'], u['inline'] = _paras(u['raw'])
+        u['paras'], u['inline'] = _paras(u['raw'], inline_notes)
         del u['raw']
     fr, _ = _paras([(r, t, p, False, False) for r, t, p in front])
     return {'units': units, 'outline': [(o['text'], o['before']) for o in outline], 'front': fr,
@@ -194,7 +200,7 @@ def _head_y(u):
     return u.get('hy', 0)
 
 
-def _paras(raw):
+def _paras(raw, inline_notes=False):
     paras, notes = [], []
     prev = None
     for r, t, pno, page_first, struct in raw:
@@ -235,6 +241,11 @@ def _paras(raw):
             return seg
         p = re.sub('\x01([^\x02]*)\x02', cut, p)
         p = p.replace('\x01', '').replace('\x02', '')
+        if inline_notes:
+            def drop2(mm):
+                notes.append(norm(mm.group(0)).strip())
+                return ''
+            p = re.sub(r'\s*\(\s*' + NOTE_WORDS + r'[^()]*\bof\s+\d{4}[^()]*\)\s*\.?\s*$', drop2, p)
         p = norm(p).strip()
         p = re.sub(r'^\((\w{1,5})\)\s*', r'(\1) ', p)
         p = re.sub(r'\s+([.,;:])$', r'\1', p)
