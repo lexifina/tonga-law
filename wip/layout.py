@@ -144,7 +144,7 @@ def read(pdf):
             hd = _is_heading(r)
             if hd:
                 started_body = True
-                cur = {'num': hd[0], 'title': norm(hd[1]).strip(), 'kind': 'sec', 'paras': [], 'notes': [], 'raw': [], 'page': pno}
+                cur = {'num': hd[0], 'title': norm(hd[1]).strip(), 'kind': 'sec', 'paras': [], 'notes': [], 'raw': [], 'page': pno, 'hy': r['y1']}
                 cur['notes'] += [n for _, n in r['sups']]
                 units.append(cur)
                 page_first = False
@@ -152,7 +152,7 @@ def read(pdf):
             if _is_structure(r) and (started_body or cur is None):
                 if re.match(r'^(FIRST |SECOND |THIRD |FOURTH |FIFTH )?SCHEDULE', plain) or re.match(r'^SCHEDULE', plain):
                     started_body = True
-                    cur = {'num': 'sch', 'title': plain, 'kind': 'schedule', 'paras': [], 'notes': [], 'raw': [], 'page': pno}
+                    cur = {'num': 'sch', 'title': plain, 'kind': 'schedule', 'paras': [], 'notes': [], 'raw': [], 'page': pno, 'hy': r['y1']}
                     cur['notes'] += [n for _, n in r['sups']]
                     units.append(cur)
                     continue
@@ -249,10 +249,13 @@ def _endnotes(pages):
     for rows in pages:
         for r in rows:
             t = norm(''.join(s['t'] for s in r['spans'])).strip()
+            lead = [n for x, n in r['sups'] if x <= r['x'] + 1 and n.isdigit()]
+            if lead:
+                t = lead[0] + ' ' + t
             if not t or t == 'ENDNOTES':
                 continue
             m = re.match(r'^(\d{1,3})\s*(\D.*)$', t)
-            if m and r['spans'][0]['size'] < 11 and r['x'] < 90 and (cur is None or int(m.group(1)) == cur + 1):
+            if m and r['x'] < 90 and (cur is None or int(m.group(1)) == cur + 1):
                 cur = int(m.group(1))
                 notes[cur] = m.group(2)
             elif cur is not None:
