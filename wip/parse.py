@@ -264,6 +264,16 @@ def build_act(act, laws, decisions):
             'first_law': None, 'earlier_laws': [k for k in earlier if k in laws], 'versions': versions}, last_state
 
 
+def unit_obj(k, t):
+    if k == 'parts':
+        return {'label': 'Parts', 'kind': 'outline', 'text': t}
+    if k == 'sch':
+        return {'label': 'Schedule', 'kind': 'schedule', 'text': t}
+    p, n = k.split('-', 1)
+    n = n.lstrip('0').upper() or '0'
+    return {'label': ('Cl. ' if p == 'cl' else 's. ') + n, 'kind': 'clause' if p == 'cl' else 'sec', 'text': t}
+
+
 def main():
     laws, decisions = {}, []
     acts = []
@@ -275,6 +285,11 @@ def main():
         amendments.apply(acts, laws, decisions)
     except ImportError:
         pass
+    for a in acts:  # units as SCHEMA objects {label, kind, text}
+        for v in a['versions']:
+            for field in ('units', 'changes'):
+                if field in v:
+                    v[field] = {k: (None if t is None else unit_obj(k, t)) for k, t in v[field].items()}
     reqs = 0
     with open(os.path.join(fetch.CACHE, 'requests.jsonl'), encoding='utf-8') as f:
         reqs = sum(1 for _ in f)
