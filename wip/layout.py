@@ -19,14 +19,16 @@ NOTE_WORDS = r'(?:Law|Laws|Act|Acts|Amended|Substituted|Inserted|Added|Repealed|
 
 
 def norm(s):
-    s = s.replace(' ', ' ').replace(' ', ' ').replace(' ', ' ').replace(' ', ' ').replace('\t', ' ')
+    for a in '    \t':
+        s = s.replace(a, ' ')
     for a in '‘’‛ʻʼ`´':
         s = s.replace(a, "'")
     for a in '“”‟':
         s = s.replace(a, '"')
     for a in '–—‑−‐':
         s = s.replace(a, '-')
-    s = s.replace('', '').replace('­', '').replace('‎', '').replace('‏', '')
+    for a in '­‎‏':
+        s = s.replace(a, '')
     s = re.sub(r'\.{4,}', '...', s)
     s = re.sub(r'[ ]{2,}', ' ', s)
     return s
