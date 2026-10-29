@@ -1,0 +1,20 @@
+The legal texts are Acts of the Kingdom of Tonga as published by the Attorney General's Office
+(Tongan Legislation, https://www.ago.gov.to), in the 1988, 2016 and 2020 Revised Editions.
+
+The site states: "Legislation can be downloaded and printed for private use. Any commercial entity is required to
+obtain permission to reuse the data." Lexifina relies instead on the Copyright Act 2002 of Tonga (now Cap. 17.05,
+2020 Revised Edition), section 5, "Subject matter not protected":
+
+  "Notwithstanding the provisions of section 3 and 4, no protection under this Act shall extend to -
+   ... (b) any official text of a legislative, administrative or legal nature, or any official translation thereof."
+
+(Text as published by WIPO Lex, https://www.wipo.int/wipolex/edocs/lexdocs/laws/en/to/to003en.pdf.) The Acts in
+this repository are official texts of a legislative nature and are therefore not protected by copyright in Tonga.
+
+Changes made by Lexifina: each edition was converted from the PDF text layer to one Markdown file per provision;
+headers, footers, endnote markers and editorial notes were left out, and the editions were arranged as git commits
+dated by the Attorney General's legislation history table. The wording of the law was not changed. The Attorney
+General's Office does not endorse this repository.
+
+Lexifina's own contributions (the arrangement of the history, the commit messages, the tables and the tools) are
+dedicated to the public domain under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/legalcode
