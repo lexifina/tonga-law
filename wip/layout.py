@@ -257,8 +257,9 @@ def _paras(raw, inline_notes=False):
 
 
 def _endnotes(pages):
-    """{n: text} from the endnote pages: an entry starts with a line whose text begins with its number."""
-    notes, cur = {}, None
+    """{n: text} from the endnote pages. An entry starts with its number: a small-type number row of its own,
+    a superscript number, or a row beginning with the number; numbers run 1, 2, 3 ... in order."""
+    notes, cur, pending = {}, None, None
     for rows in pages:
         for r in rows:
             t = norm(''.join(s['t'] for s in r['spans'])).strip()
@@ -267,8 +268,16 @@ def _endnotes(pages):
                 t = lead[0] + ' ' + t
             if not t or t == 'ENDNOTES':
                 continue
+            if re.fullmatch(r'\d{1,3}', t) and r['spans'][0]['size'] < 8:
+                if cur is None and t == '1' or cur is not None and int(t) == cur + 1:
+                    pending = int(t)
+                    continue
+            if pending is not None:
+                cur, pending = pending, None
+                notes[cur] = t
+                continue
             m = re.match(r'^(\d{1,3})\s*(\D.*)$', t)
-            if m and r['x'] < 90 and (cur is None or int(m.group(1)) == cur + 1):
+            if m and r['x'] < 90 and (cur is None and m.group(1) == '1' or cur is not None and int(m.group(1)) == cur + 1):
                 cur = int(m.group(1))
                 notes[cur] = m.group(2)
             elif cur is not None:
