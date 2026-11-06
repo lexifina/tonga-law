@@ -1,5 +1,7 @@
 # Tonga: law history in git
 
+Part of [lexifina/global-law](https://github.com/lexifina/global-law), one git history for every country's law: this is Tonga's national law, which global-law reads at `tonga/national/acts/`.
+
 The law of Tonga as a git history: one file per provision, one commit per edition on the day it took effect. `git blame` names the edition behind every clause; `git log` lists every change to a clause; picking a date gives the text in force that day.
 
 It follows the shared design of [lexifina/global-law](https://github.com/lexifina/global-law), which places it at `to/`.
